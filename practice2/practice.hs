@@ -15,7 +15,9 @@ data Vehiculo = Vehiculo {
 -- Función para registrar la entrada de un vehículo al parqueadero
 registrarEntrada :: String -> UTCTime -> [Vehiculo] -> [Vehiculo]
 registrarEntrada placaVehiculo tiempo parqueadero =
-    Vehiculo placaVehiculo tiempo Nothing : parqueadero
+    if verificarVehiculoEnParqueadero placaVehiculo parqueadero
+    then parqueadero
+    else Vehiculo placaVehiculo tiempo Nothing : parqueadero
 
 -- Función para registrar la salida de un vehículo del parqueadero
 registrarSalida :: String -> UTCTime -> [Vehiculo] -> [Vehiculo]
@@ -30,6 +32,12 @@ buscarVehiculo placaVehiculo parqueadero =
         isNothing Nothing = True
         isNothing _       = False
 
+-- Función para verificar si un vehículo ya se encuentra en el parqueadero
+verificarVehiculoEnParqueadero :: String -> [Vehiculo] -> Bool
+verificarVehiculoEnParqueadero placaVehiculo parqueadero =
+    case buscarVehiculo placaVehiculo parqueadero of
+        Just _  -> True
+        Nothing -> False
 
 -- Función para calcular el tiempo que un vehículo permaneció en el parqueadero
 tiempoEnParqueadero :: Vehiculo -> UTCTime -> NominalDiffTime
@@ -83,7 +91,6 @@ formatoVehiculo :: Vehiculo -> String
 formatoVehiculo vehiculo =
     "Vehiculo {PLACA: " ++ mostrarVehiculo vehiculo ++ "}"
 
-
 main :: IO ()
 main = do
     parqueaderoInicial <- cargarParqueadero
@@ -105,11 +112,16 @@ cicloPrincipal parqueadero = do
         "1" -> do
             putStrLn "Ingrese la placa del vehículo:"
             placaVehiculo <- getLine
-            tiempoActual <- getCurrentTime
-            let parqueaderoActualizado = registrarEntrada placaVehiculo tiempoActual parqueadero
-            putStrLn $ "Vehículo con placa " ++ placaVehiculo ++ " ingresado al parqueadero."
-            guardarParqueadero parqueaderoActualizado
-            cicloPrincipal parqueaderoActualizado
+            if verificarVehiculoEnParqueadero placaVehiculo parqueadero
+            then do
+                putStrLn $ "El vehículo con placa " ++ placaVehiculo ++ " ya se encuentra en el parqueadero."
+                cicloPrincipal parqueadero
+            else do
+                tiempoActual <- getCurrentTime
+                let parqueaderoActualizado = registrarEntrada placaVehiculo tiempoActual parqueadero
+                putStrLn $ "Vehículo con placa " ++ placaVehiculo ++ " ingresado al parqueadero."
+                guardarParqueadero parqueaderoActualizado
+                cicloPrincipal parqueaderoActualizado
 
         "2" -> do
             putStrLn "Ingrese la placa del vehículo a salir:"
