@@ -1,3 +1,5 @@
 # Proyecto2
-para correr el codigo -> ghc -o run practice.hs 
-despues -> ./run
+Maria Fernanda Álvarez Marín
+Anna Sofia Giraldo Carvajal
+
+Platform used: Visual Studio Code and IntelliJ IDEA
