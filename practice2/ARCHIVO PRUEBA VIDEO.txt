@@ -1,0 +1,124 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. Todos los derechos reservados.
+
+Instale la versión más reciente de PowerShell para obtener nuevas características y mejoras. https://aka.ms/PSWindows
+
+PS C:\Users\Anna\OneDrive\Escritorio\Tareas Lenguajes\Proyecto2\practice2> ghc -o run practice.hs
+PS C:\Users\Anna\OneDrive\Escritorio\Tareas Lenguajes\Proyecto2\practice2> ./run
+¡Bienvenido al Sistema de Gestión de Parqueadero!
+
+Seleccione una opción:
+1. Registrar entrada de vehículo
+2. Registrar salida de vehículo
+3. Buscar vehículo por placa
+4. mostrar vehiculos
+5. Salir
+1
+Ingrese la placa del vehículo:
+ABC123
+Vehículo con placa ABC123 ingresado al parqueadero.
+Parqueadero guardado en el archivo parqueadero.txt.
+
+Seleccione una opción:
+1. Registrar entrada de vehículo
+2. Registrar salida de vehículo
+3. Buscar vehículo por placa
+4. mostrar vehiculos
+5. Salir
+1
+Ingrese la placa del vehículo:
+ABC123
+El vehículo con placa ABC123 ya se encuentra en el parqueadero.
+
+Seleccione una opción:
+1. Registrar entrada de vehículo
+2. Registrar salida de vehículo
+3. Buscar vehículo por placa
+4. mostrar vehiculos
+5. Salir
+1
+Ingrese la placa del vehículo:
+ABD124
+Vehículo con placa ABD124 ingresado al parqueadero.
+Parqueadero guardado en el archivo parqueadero.txt.
+
+Seleccione una opción:
+1. Registrar entrada de vehículo
+2. Registrar salida de vehículo
+3. Buscar vehículo por placa
+4. mostrar vehiculos
+5. Salir
+2
+Ingrese la placa del vehículo a salir:
+ABD124
+Vehículo con placa ABD124 ha salido del parqueadero.
+Parqueadero guardado en el archivo parqueadero.txt.
+
+Seleccione una opción:
+1. Registrar entrada de vehículo
+2. Registrar salida de vehículo
+3. Buscar vehículo por placa
+4. mostrar vehiculos
+5. Salir
+3
+Ingrese la placa del vehículo a buscar:
+ABD124
+Vehículo no encontrado en el parqueadero.
+
+Seleccione una opción:
+1. Registrar entrada de vehículo
+2. Registrar salida de vehículo
+3. Buscar vehículo por placa
+4. mostrar vehiculos
+5. Salir
+3
+Ingrese la placa del vehículo a buscar:
+ABF123
+Vehículo no encontrado en el parqueadero.
+
+Seleccione una opción:
+1. Registrar entrada de vehículo
+2. Registrar salida de vehículo
+3. Buscar vehículo por placa
+4. mostrar vehiculos
+5. Salir
+3
+Ingrese la placa del vehículo a buscar:
+AAA111
+El vehículo con placa AAA111 se encuentra en el parqueadero.
+Tiempo en parqueadero: 184242.0272971s segundos.
+
+Seleccione una opción:
+1. Registrar entrada de vehículo
+2. Registrar salida de vehículo
+3. Buscar vehículo por placa
+4. mostrar vehiculos
+5. Salir
+2
+Ingrese la placa del vehículo a salir:
+AAA111
+Vehículo con placa AAA111 ha salido del parqueadero.
+Parqueadero guardado en el archivo parqueadero.txt.
+
+Seleccione una opción:
+1. Registrar entrada de vehículo
+2. Registrar salida de vehículo
+3. Buscar vehículo por placa
+4. mostrar vehiculos
+5. Salir
+4
+Vehiculo {PLACA: ABC123,2024-05-22 20:41:10,}
+Vehiculo {PLACA: DDD444,2024-05-20 17:23:21,}
+Vehiculo {PLACA: CCC333,2024-05-20 17:22:00,}
+Vehiculo {PLACA: BBB222,2024-05-20 17:21:51,}
+Vehiculo {PLACA: qwe 221,2024-05-17 18:00:35,}
+
+Seleccione una opción:
+1. Registrar entrada de vehículo
+2. Registrar salida de vehículo
+3. Buscar vehículo por placa
+4. mostrar vehiculos
+5. Salir
+5
+¡Hasta luego!
+PS C:\Users\Anna\OneDrive\Escritorio\Tareas Lenguajes\Proyecto2\practice2>
